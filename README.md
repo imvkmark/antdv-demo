@@ -2,8 +2,11 @@
 
 Vite2.x + Vue3.x + TypeScript Starter
 
+> 本项目后端基于 poppy framework
+
 ## 技术栈
 
+- 后端框架: [Poppy Framework](https://github.com/imvkmark/poppy-framework)
 - 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
 - 构建工具：[Vite 2.x](https://cn.vitejs.dev/)
 - 前端框架：[Vue 3.x](https://v3.cn.vuejs.org/)
@@ -28,14 +31,27 @@ $ yarn start:<env>
 $ yarn build:<env>
 ```
 
-### Sentry 不在开发环境下报告
+## 示例页面
 
-```
-# config/.env.local
+**登录**
 
-# 本地开发环境是 Development
-NODE_ENV=development
-```
+![](./docs/images/login.png)
+
+**注册**
+
+![](./docs/images/register.png)
+
+**找回密码**
+
+![](./docs/images/reset_pwd.png)
+
+**控制台**
+
+![](./docs/images/cp.png)
+
+**用户中心**
+
+![](./docs/images/user.png)
 
 MIT Copyright © 2021 duoli<zhaody901<AT>126.com>
 
