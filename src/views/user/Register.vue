@@ -73,7 +73,6 @@ import { isMobile } from '@popjs/util';
 import { useRouter } from 'vue-router';
 import { useForm } from 'ant-design-vue/es/form';
 import IconFont from '@/components/base/IconFont';
-import { apiUserProfileRegister } from '@/services/user';
 import { pcToast } from '@/utils/pc';
 import useUserUtil from '@/composables/useUserUtil';
 import { siteUrl } from '@/utils/conf';
@@ -242,16 +241,7 @@ export default defineComponent({
             this.ruleRef.agree = this.rules.agree;
             this.validate().then(() => {
                 this.$store.dispatch('poppy/Loading').then()
-                apiUserProfileRegister({
-                    mobile: this.value.passport,
-                    captcha: this.value.captcha,
-                    password: this.value.password
-                }).then(({ message, success, data }) => {
-                    pcToast(message, success);
-                    if (success) {
-                        this.userLogin(data)
-                    }
-                })
+                pcToast('本项目不允许注册, 此仅仅为示例Demo', false)
             }).catch(() => {
             })
 
