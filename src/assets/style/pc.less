@@ -1,0 +1,242 @@
+@import 'vars.less';
+@import "node_modules/@popjs/util/dist/less/index";
+
+.px--base {
+	a {
+		color: @primaryColor;
+		transition: all 0.3s;
+		&:hover {
+			color: lighten(@primaryColor, 10%)
+		}
+	}
+}
+
+.px--user-box {
+	background: #FFF;
+	padding: 60px;
+	h3 {
+		font-size: 28px;
+		line-height: 60px;
+		height: 60px;
+		border-bottom: 1px solid #D1D8E4;
+		margin-bottom: 1.5rem;
+		span {
+			font-size: 16px;
+			float: right;
+			position: relative;
+			top: 14px;
+		}
+	}
+}
+
+// 顶部的菜单
+.px--menu {
+	li {
+		&::after {
+			display: none;
+		}
+	}
+	.ant-menu-item-selected {
+		background: @primaryColor;
+		&:hover {
+			background: lighten(@primaryColor, 10%);
+			span {
+				color: darken(#FFF, 10%);
+			}
+		}
+		span {
+			color: #FFF;
+		}
+	}
+}
+
+// 侧边栏菜单
+.px--side {
+	background: transparent;
+	font-weight: bold;
+	.ant-menu-item, .ant-menu-submenu-title {
+		margin-top: 0;
+		margin-bottom: 0;
+		height: 48px !important;
+		line-height: 48px !important;
+		a {
+			&:hover {
+				color: @textColor !important;
+			}
+		}
+		:not(.ant-menu-item-selected) &:hover {
+			background: lighten(#E6EBF5, 1%) !important;
+		}
+	}
+	.ant-menu-item-selected {
+		background: #E6EBF5 !important;
+		a {
+			color: @textColor !important;
+		}
+		&:after {
+			border-right-width: 2px;
+		}
+	}
+	.ant-menu-item {
+		margin-bottom: 0 !important;
+	}
+}
+
+// 容器
+.px--container {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.px--login-tab {
+	.ant-tabs-bar {
+		height: 80px;
+	}
+	.ant-tabs-ink-bar {
+		height: 1px;
+	}
+	.ant-tabs-nav {
+		width: 100%;
+		div {
+			div {
+				width: 50%;
+				text-align: center;
+			}
+		}
+	}
+	.ant-tabs-tab {
+		padding: 0 !important;
+		font-size: 18px;
+		line-height: 80px;
+		text-align: center;
+		height: 80px !important;
+		margin-right: 0 !important;
+	}
+	.ant-tabs-tab-active {
+		color: @primaryColor !important;
+	}
+}
+
+.px--form {
+	.ant-form-item-control-input-content {
+		position: relative;
+		.form-icon {
+			position: absolute;
+			font-size: 30px;
+			top: 13px;
+			left: 6px;
+			z-index: 1;
+			color: rgba(0, 0, 0, 0.3);
+			transition: all 0.3s;
+		}
+		&:hover {
+			.form-icon {
+				color: lighten(@inputFocusColor, 60%)
+			}
+		}
+	}
+	.ant-input {
+		&::placeholder {
+			font-size: 16px;
+		}
+		&.form-with-icon {
+			padding-left: 40px;
+		}
+		border-radius: 6px;
+		height: 54px;
+		line-height: 54px;
+		&:hover {
+			border-color: lighten(@inputFocusColor, 60%);
+		}
+		&:focus {
+			border-color: @inputFocusColor;
+			border-right-width: 1px !important;
+			outline: 0;
+			box-shadow: none;
+			+ .form-icon {
+				color: @inputFocusColor !important;
+			}
+		}
+	}
+	.ant-input-password {
+		&.form-with-icon {
+			input {
+				padding-left: 35px;
+				height: 54px;
+				line-height: 54px;
+			}
+		}
+		border-radius: 6px;
+		&.ant-input-affix-wrapper {
+			padding: 0 8px 0;
+		}
+		&.ant-input-affix-wrapper-focused {
+			border-color: @inputFocusColor;
+			border-right-width: 1px !important;
+			outline: 0;
+			box-shadow: none;
+			+ .form-icon {
+				color: @inputFocusColor !important;
+			}
+		}
+		&:hover {
+			border-color: lighten(@inputFocusColor, 60%);
+		}
+		&:focus {
+			border-color: @inputFocusColor;
+			border-right-width: 1px !important;
+			outline: 0;
+			box-shadow: none;
+			+ .form-icon {
+				color: @inputFocusColor !important;
+			}
+		}
+	}
+	.ant-btn {
+		height: 54px;
+		padding: 6.4px 15px;
+		font-size: 18px;
+		border-radius: 6px;
+	}
+}
+
+.px--cp-form {
+	.ant-form-item-label {
+		height: 40px;
+		> label {
+			height: 40px;
+		}
+	}
+}
+
+.px--header-user {
+	.ant-dropdown-menu {
+		padding: 0;
+		a {
+			color: @textColor !important;
+		}
+	}
+	.ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
+		padding: 0 12px;
+		&:hover {
+			background: lighten(#E6EBF5, 1%) !important;
+		}
+	}
+	.ant-dropdown-menu-item-divider {
+		margin: 0;
+	}
+}
+
+.px--cp {
+	min-width: 980px;
+	h2 {
+		color: @textColor;
+	}
+	h4 {
+		font-weight: bold;
+		color: rgb(153, 153, 153);
+		font-size: 14px;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+}
