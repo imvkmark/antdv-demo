@@ -53,5 +53,5 @@ $ yarn build:<env>
 
 ![](./docs/images/user.png)
 
-MIT Copyright © 2021 duoli<zhaody901<AT>126.com>
+MIT Copyright © 2021 duoli<zhaody901@126.com>
 
