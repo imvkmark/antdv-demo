@@ -3,7 +3,7 @@
         <div class="px--container">
             <a-row>
                 <a-col :span="14" class="login-desc">
-                    <h2>网站介绍</h2>
+                    <h2><icon-font type="icon-watch"></icon-font>网站介绍</h2>
                     <ul>
                         <li>
                             介绍1
